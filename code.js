@@ -2,14 +2,14 @@
 var sudoku = [];
 var newSudoku = [];
 
-function showSudocuSolverDiv() {
-    const sudocuSolverDiv = document.getElementById('sudocu-solver');
-    const sudocuSelectDiv = document.getElementById('sudocu-select');
-    sudocuSolverDiv.style.display = 'block';
-    sudocuSelectDiv.style.display = 'none';
+function showsucokuSolverDiv() {
+    const sucokuSolverDiv = document.getElementById('sucoku-solver');
+    const sucokuSelectDiv = document.getElementById('sucoku-select');
+    sucokuSolverDiv.style.display = 'block';
+    sucokuSelectDiv.style.display = 'none';
 }
 
-function generateSudocuTable(size) {
+function generatesucokuTable(size) {
     const table = document.getElementById('sudoku');
     table.classList.add(`size${size}`);
 
@@ -44,7 +44,7 @@ function generateSudocuTable(size) {
     console.log(sudoku);
 }
 
-function fillSudocuTable() {
+function fillsucokuTable() {
     const size = document.getElementById('size').value;
     for (let i = 0; i < size; i++) {
         for (let j = 0; j < size; j++) {
@@ -59,9 +59,9 @@ function fillSudocuTable() {
 
 function generateSudoku() {
     const size = document.getElementById('size').value;
-    showSudocuSolverDiv();
-    generateSudocuTable(size);
-    fillSudocuTable();
+    showsucokuSolverDiv();
+    generatesucokuTable(size);
+    fillsucokuTable();
 }
 
 function confirmInputs() {
@@ -76,7 +76,7 @@ function confirmInputs() {
     }
     console.log(sudoku);
 
-    fillSudocuTable();
+    fillsucokuTable();
 }
 
 function volgendeStap() {
@@ -92,7 +92,7 @@ function volgendeStap() {
     }
     
     console.log(sudoku);
-    fillSudocuTable();
+    fillsucokuTable();
 }
 
 function checkRow(row, colomn) {
